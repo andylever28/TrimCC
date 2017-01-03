@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  javascript: 1
+  html: 1
+  css: 1
+  apprentice: one
+
+two:
+  javascript: 1
+  html: 1
+  css: 1
+  apprentice: two
