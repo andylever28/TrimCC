@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+	<p> Hi Tim, </p>
+	<p> I have successfully completed the Trim Coding Challenge. Please see below for the data you requested. </p>
+	<h1> Name: <%= @apprentice.name %> <%= @apprentice.email %> </h1>
+	<p> This project is hosted at <%= @apprentice.project_url %>. The github repo can be viewed at <%= @apprentice.project_repo %> </p>
+	<h2> Language rankings </h2>
+	<% @apprentice.language_rating.first do |rating| %> 
+	<ul>
+		<li> Javascript: <%= rating.javascript %> / 50 </li>
+		<li> HTML: <%= rating.html %> / 50 </li>
+		<li> CSS: <%= rating.css %> / 50 </li>
+	</ul>
+	<% end %>
+	<h2> Aptitude </h2>
+	<% @apprentice.aptitude.first do |skill| %> 
+	<ul> 
+		<li> Working on a team: <%= skill.teamwork %> / 50 </li>
+		<li> Self Motivation: <%= skill.motivation %> / 50 </li>
+		<li> Communication Skills: <%= skill.communication %> / 50 </li>
+		<li> Energy Level: <%= skill.energy %> / 50 </li>
+		<li> Intelligence: <%= skill.intelligence %> / 50 </li>
+		<li> Problem Solving Skills: <%= skill.problem_solving %> / 50 </li>
+	</ul>
+	<%end%>
+
+	<h2> Coding Pratices </h2>
+	<% @apprentice.code_pracitce.first do |skill| %> 
+	<ul> 
+		<li> Using best practices for OOP: <%= skill.OOP %> / 50 </li> 
+		<li> Modular Development: <%= skill.modular_development %> / 50 </li> 
+		<li> Full-stack workflow understanding: <%= skill.full_stack %> / 50 </li> 
+		<li> Testing: <%= skill.testing %> / 50 </li> 
+		<li> Database Knowledge: <%= skill.db_knowledge %> / 50 </li> 
+		<li> Debugging: <%= skill.debugging %> / 50 </li> 
+	</ul>
+	<% end %>
+
+	<p> The coding challenge was a fun and rewarding experience. 3 months ago, I would have rated myself a 0 for almost all the skills listed. I have experience tremendous growth, and I am eager to continue my learning. I know I would quickly become a valued member of the trim team. </p>
+	<p> Please feel free to contact me at any time. </p>
+
+	<p> Regards, </br>
+	<%= @apprentice.name %> </p>
+
+
+</body>
+</html>

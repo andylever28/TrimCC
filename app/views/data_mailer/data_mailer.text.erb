@@ -1,0 +1,51 @@
+Hi Tim,
+
+I have successfully completed the Trim Coding Challenge. Please see below for the data you requested.
+
+
+** Name: <%= @apprentice.name %> <%= @apprentice.email %>
+------------------------------------------------------------
+
+This project is hosted at <%= @apprentice.project_url %>. The github repo can be viewed at <%= @apprentice.project_repo %>
+
+
+** Language rankings
+------------------------------------------------------------
+<% @apprentice.language_rating.first do |rating| %>
+* Javascript: <%= rating.javascript %> / 50
+* HTML: <%= rating.html %> / 50
+* CSS: <%= rating.css %> / 50
+
+<% end %>
+
+
+** Aptitude
+------------------------------------------------------------
+<% @apprentice.aptitude.first do |skill| %>
+* Working on a team: <%= skill.teamwork %> / 50
+* Self Motivation: <%= skill.motivation %> / 50
+* Communication Skills: <%= skill.communication %> / 50
+* Energy Level: <%= skill.energy %> / 50
+* Intelligence: <%= skill.intelligence %> / 50
+* Problem Solving Skills: <%= skill.problem_solving %> / 50
+
+<%end%>
+
+
+** Coding Pratices
+------------------------------------------------------------
+<% @apprentice.code_pracitce.first do |skill| %>
+* Using best practices for OOP: <%= skill.OOP %> / 50
+* Modular Development: <%= skill.modular_development %> / 50
+* Full-stack workflow understanding: <%= skill.full_stack %> / 50
+* Testing: <%= skill.testing %> / 50
+* Database Knowledge: <%= skill.db_knowledge %> / 50
+* Debugging: <%= skill.debugging %> / 50
+
+<% end %>
+
+The coding challenge was a fun and rewarding experience. 3 months ago, I would have rated myself a 0 for almost all the skills listed. I have experience tremendous growth, and I am eager to continue my learning. I know I would quickly become a valued member of the trim team.
+
+Please feel free to contact me at any time.
+
+Regards, <%= @apprentice.name %>

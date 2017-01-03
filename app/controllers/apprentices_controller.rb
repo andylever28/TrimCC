@@ -1,4 +1,9 @@
 class ApprenticesController < ApplicationController
+  
+  def index
+   redirect_to new_apprentice_path
+  end  
+
   def new
   	@apprentice = Apprentice.new
   end
@@ -8,6 +13,7 @@ class ApprenticesController < ApplicationController
 
     respond_to do |format|
     if @apprentice.save
+      data_mailer(@apprentice).deliver_now
        format.html { redirect_to root_url, :notice => "Signed up!" }
     else 
       format.html { render :new }
