@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  OOP: 1
+  modular_development: 1
+  full_stack: 1
+  testing: 1
+  db_knowledge: 1
+  apprentice: one
+
+two:
+  OOP: 1
+  modular_development: 1
+  full_stack: 1
+  testing: 1
+  db_knowledge: 1
+  apprentice: two
