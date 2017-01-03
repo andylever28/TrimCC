@@ -1,0 +1,51 @@
+.application-row {
+	display: flex;
+	justify-content: space-around;
+}
+.application-column {
+	background: #456990;
+	margin-top: 5em;
+}
+
+.field,
+.actions {
+	background: #456990;
+	height: 6em;
+}
+
+.inline-text-box {
+	margin: 1.5em 5%;
+	height: 3em;
+	width: 90%;
+	background: #E4FDE1;
+	text-indent: 1em;
+	letter-spacing: 2px;
+}
+
+.number-label {
+	background: #456990;
+	color: #E4FDE1;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	margin-left: 5%;
+	width: 75%;
+	letter-spacing: 4px;
+	height: 3em;
+}
+
+.number-input { 
+width: 15%; 
+margin-top: 1.5em;
+height: 3em;
+background: #E4FDE1;
+}
+
+.application-submit {
+	width: 90%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 5%;
+	background: #F45B69;
+	color: #E4FDE1;
+	letter-spacing: 2px;
+}

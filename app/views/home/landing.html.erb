@@ -1,5 +1,12 @@
  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
-
-<%= link_to "New Apprentice Application", new_apprentice_path %>
+ <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+ <div class="landing container-fluid">
+ 	<div class="row">
+ 		<div class="col-xs-12">
+ 			<h1> Welcome! </h1>
+ 			<h3> Interested in Trim Agency? Apply Below! </h3>
+ 			 <%= link_to "Apprentice Application", new_apprentice_path %> 
+ 	</div>
+ </div>
+</div>

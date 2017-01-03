@@ -1,109 +1,115 @@
-<%= form_for apprentice do |f| %>
+<div class="container-fluid">
+  <div class="application-row row">
+    <div class="application-column col-xs-10 col-sm-6">
+      <%= form_for apprentice do |f| %>
+      <% if apprentice.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(apprentice.errors.count, "error") %> prohibited this apprentice from being saved:</h2>
 
-<% if apprentice.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(apprentice.errors.count, "error") %> prohibited this apprentice from being saved:</h2>
-
-      <ul>
-      <% apprentice.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+          <% apprentice.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
+
+
+      <div class="field">
+        <%= f.text_field :name, placeholder: "FULL NAME", class: "inline-text-box" %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :email, placeholder: "EMAIL", class: "inline-text-box" %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :project_repo, placeholder: "PROJECT REPO", class: "inline-text-box"%>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :project_url, placeholder: "PROJECT URL", class: "inline-text-box" %>
+      </div>
+
+      <%= f.fields_for :code_practice, CodePractice.new do |builder| %> <!-- Code Practice Attributes --> 
+      <div class="field">
+        <%= builder.label "USING BEST PRACTICES FOR OOP:", class: "number-label" %>
+        <%= builder.text_field :OOP, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label "MODULAR DEVELOPMENT: ", class: "number-label" %>
+        <%= builder.text_field :modular_development, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label "FULL STACK UNDERSTANDING:", class: "number-label" %>
+        <%= builder.text_field :full_stack, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label "TESTING", class: "number-label" %>
+        <%= builder.text_field :testing, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label "DATABASE KNOWLEDGE", class: "number-label" %>
+        <%= builder.text_field :db_knowledge, class: "number-input" %>
+      </div>
+
+      <div class="field">
+        <%= builder.label :debugging, class: "number-label" %>
+        <%= builder.text_field :debugging, class: "number-input" %>
+      </div>
+
+      <% end %> <!-- End Code Practice Attributes -->
+
+      <%= f.fields_for :aptitude, Aptitude.new do |builder| %> <!--  Aptitude Attributes -->
+      <div class="field">
+        <%= builder.label :problem_solving, class: "number-label" %>
+        <%= builder.text_field :problem_solving, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :teamwork, class: "number-label" %>
+        <%= builder.text_field :teamwork, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :motivation, class: "number-label" %>
+        <%= builder.text_field :motivation, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :communication, class: "number-label" %>
+        <%= builder.text_field :communication, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :energy, class: "number-label" %>
+        <%= builder.text_field :energy, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :intelligence, class: "number-label" %>
+        <%= builder.text_field :intelligence, class: "number-input" %>
+      </div>
+
+      <% end %> <!--  Aptitude Attributes -->
+
+      <%= f.fields_for :language_rating, LanguageRating.new do |builder| %> <!--  language rating Attributes -->
+      <div class="field">
+        <%= builder.label :javascript, class: "number-label" %>
+        <%= builder.text_field :javascript, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :html, class: "number-label" %>
+        <%= builder.text_field :html, class: "number-input" %>
+      </div>
+      <div class="field">
+        <%= builder.label :css, class: "number-label" %>
+        <%= builder.text_field :css, class: "number-input" %>
+      </div>
+      <% end %> <!--  language rating Attributes -->
+
+      <div class="actions">
+        <%= f.submit 'Submit', :class => 'application-submit' %>
+      </div>
+      <% end %>
     </div>
-  <% end %>
-
-<div class="field">
-  <%= f.label :full_name %>
-  <%= f.text_field :name %>
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-</div>
 
-<div class="field">
-  <%= f.label :Project_Repo %>
-  <%= f.text_field :project_repo %>
-</div>
 
-<div class="field">
-  <%= f.label :Project_URL %>
-  <%= f.text_field :project_url %>
-</div>
-  <%= f.fields_for :code_practice, CodePractice.new do |builder| %> <!-- Code Practice Attributes --> 
-<div class="field">
-  <%= builder.label :OOP %>
-  <%= builder.text_field :OOP %>
-</div>
-<div class="field">
-  <%= builder.label :modular_development %>
-  <%= builder.text_field :modular_development %>
-</div>
-<div class="field">
-  <%= builder.label :full_stack %>
-  <%= builder.text_field :full_stack %>
-</div>
-<div class="field">
-  <%= builder.label :testing %>
-  <%= builder.text_field :testing %>
-</div>
-<div class="field">
-  <%= builder.label :database_knowlege %>
-  <%= builder.text_field :db_knowledge %>
-</div>
-
-<div class="field">
-  <%= builder.label :debugging %>
-  <%= builder.text_field :debugging %>
-</div>
-
-<% end %> <!-- End Code Practice Attributes -->
-
-<%= f.fields_for :aptitude, Aptitude.new do |builder| %> <!--  Aptitude Attributes -->
-<div class="field">
-  <%= builder.label :problem_solving %>
-  <%= builder.text_field :problem_solving %>
-</div>
-<div class="field">
-  <%= builder.label :teamwork %>
-  <%= builder.text_field :teamwork %>
-</div>
-<div class="field">
-  <%= builder.label :motivation %>
-  <%= builder.text_field :motivation %>
-</div>
-<div class="field">
-  <%= builder.label :communication %>
-  <%= builder.text_field :communication %>
-</div>
-<div class="field">
-  <%= builder.label :energy %>
-  <%= builder.text_field :energy %>
-</div>
-<div class="field">
-  <%= builder.label :intelligence %>
-  <%= builder.text_field :intelligence %>
-</div>
-
-<% end %> <!--  Aptitude Attributes -->
-
-<%= f.fields_for :language_rating, LanguageRating.new do |builder| %> <!--  language rating Attributes -->
-<div class="field">
-  <%= builder.label :javascript %>
-  <%= builder.text_field :javascript %>
-</div>
-<div class="field">
-  <%= builder.label :html %>
-  <%= builder.text_field :html %>
-</div>
-<div class="field">
-  <%= builder.label :css %>
-  <%= builder.text_field :css %>
-</div>
-<% end %> <!--  language rating Attributes -->
-
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% end %>
