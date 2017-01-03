@@ -6,11 +6,14 @@ class ApprenticesController < ApplicationController
   def create
   	@apprentice = Apprentice.new(apprentice_params)
 
+    respond_to do |format|
     if @apprentice.save
-      redirect_to root_url, :notice => "Signed up!"
+       format.html { redirect_to root_url, :notice => "Signed up!" }
     else 
-      redirect_to new_apprentice_path, :notice => "there was an error signing up"
+      format.html { render :new }
+      format.json { render json: @apprentice.errors, status: :unprocessable_entity }
     end  
+  end
   end
 
   private 
