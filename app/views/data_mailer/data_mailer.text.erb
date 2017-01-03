@@ -11,38 +11,29 @@ This project is hosted at <%= @apprentice.project_url %>. The github repo can be
 
 ** Language rankings
 ------------------------------------------------------------
-<% @apprentice.language_rating.first do |rating| %>
-* Javascript: <%= rating.javascript %> / 50
-* HTML: <%= rating.html %> / 50
-* CSS: <%= rating.css %> / 50
-
-<% end %>
+* Javascript: <%= @apprentice.language_rating.javascript %> / 50
+* HTML: <%= @apprentice.language_rating.html %> / 50
+* CSS: <%= @apprentice.language_rating.css %> / 50
 
 
 ** Aptitude
 ------------------------------------------------------------
-<% @apprentice.aptitude.first do |skill| %>
-* Working on a team: <%= skill.teamwork %> / 50
-* Self Motivation: <%= skill.motivation %> / 50
-* Communication Skills: <%= skill.communication %> / 50
-* Energy Level: <%= skill.energy %> / 50
-* Intelligence: <%= skill.intelligence %> / 50
-* Problem Solving Skills: <%= skill.problem_solving %> / 50
-
-<%end%>
+* Working on a team: <%= @apprentice.aptitude.teamwork %> / 50
+* Self Motivation: <%= @apprentice.aptitude.motivation %> / 50
+* Communication Skills: <%= @apprentice.aptitude.communication %> / 50
+* Energy Level: <%= @apprentice.aptitude.energy %> / 50
+* Intelligence: <%= @apprentice.aptitude.intelligence %> / 50
+* Problem Solving Skills: <%= @apprentice.aptitude.problem_solving %> / 50
 
 
 ** Coding Pratices
 ------------------------------------------------------------
-<% @apprentice.code_pracitce.first do |skill| %>
-* Using best practices for OOP: <%= skill.OOP %> / 50
-* Modular Development: <%= skill.modular_development %> / 50
-* Full-stack workflow understanding: <%= skill.full_stack %> / 50
-* Testing: <%= skill.testing %> / 50
-* Database Knowledge: <%= skill.db_knowledge %> / 50
-* Debugging: <%= skill.debugging %> / 50
-
-<% end %>
+* Using best practices for OOP: <%= @apprentice.code_practice.OOP %> / 50
+* Modular Development: <%= @apprentice.code_practice.modular_development %> / 50
+* Full-stack workflow understanding: <%= @apprentice.code_practice.full_stack %> / 50
+* Testing: <%= @apprentice.code_practice.testing %> / 50
+* Database Knowledge: <%= @apprentice.code_practice.db_knowledge %> / 50
+* Debugging: <%= @apprentice.code_practice.debugging %> / 50
 
 The coding challenge was a fun and rewarding experience. 3 months ago, I would have rated myself a 0 for almost all the skills listed. I have experience tremendous growth, and I am eager to continue my learning. I know I would quickly become a valued member of the trim team.
 
