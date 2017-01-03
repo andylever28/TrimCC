@@ -1,3 +1,3 @@
 class CodePractice < ApplicationRecord
-  belongs_to :apprentice
+  belongs_to :apprentice, optional: true
 end
