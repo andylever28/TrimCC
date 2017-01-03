@@ -1,2 +1,92 @@
-<h1>Apprentices#new</h1>
-<p>Find me in app/views/apprentices/new.html.erb</p>
+<%= form_for @apprentice do |f| %>
+
+  
+<div class="field">
+  <%= f.label :full_name %>
+  <%= f.text_field :name %>
+</div>
+
+<div class="field">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+
+<div class="field">
+  <%= f.label :Project_Repo %>
+  <%= f.text_field :project_repo %>
+</div>
+
+<div class="field">
+  <%= f.label :Project_URL %>
+  <%= f.text_field :project_url %>
+</div>
+	<%= f.fields_for :code_practice, CodePractice.new do |builder| %> <!-- Code Practice Attributes --> 
+<div class="field">
+  <%= builder.label :OOP %>
+  <%= builder.text_field :OOP %>
+</div>
+<div class="field">
+  <%= builder.label :modular_development %>
+  <%= builder.text_field :modular_development %>
+</div>
+<div class="field">
+  <%= builder.label :testing %>
+  <%= builder.text_field :testing %>
+</div>
+<div class="field">
+  <%= builder.label :database_knowlege %>
+  <%= builder.text_field :db_knowledge %>
+</div>
+<div class="field">
+  <%= builder.label :full_stack %>
+  <%= builder.text_field :full_stack %>
+</div>
+
+<% end %> <!-- End Code Practice Attributes -->
+
+<%= f.fields_for :aptitude, Aptitude.new do |builder| %> <!--  Aptitude Attributes -->
+<div class="field">
+  <%= builder.label :teamwork %>
+  <%= builder.text_field :teamwork %>
+</div>
+<div class="field">
+  <%= builder.label :motivation %>
+  <%= builder.text_field :motivation %>
+</div>
+<div class="field">
+  <%= builder.label :communication %>
+  <%= builder.text_field :communication %>
+</div>
+<div class="field">
+  <%= builder.label :energy %>
+  <%= builder.text_field :energy %>
+</div>
+<div class="field">
+  <%= builder.label :intelligence %>
+  <%= builder.text_field :intelligence %>
+</div>
+<div class="field">
+  <%= builder.label :problem_solving %>
+  <%= builder.text_field :problem_solving %>
+</div>
+<% end %> <!--  Aptitude Attributes -->
+
+<%= f.fields_for :language_rating, LanguageRating.new do |builder| %> <!--  language rating Attributes -->
+<div class="field">
+  <%= builder.label :javascript %>
+  <%= builder.text_field :javascript %>
+</div>
+<div class="field">
+  <%= builder.label :html %>
+  <%= builder.text_field :html %>
+</div>
+<div class="field">
+  <%= builder.label :css %>
+  <%= builder.text_field :css %>
+</div>
+<% end %> <!--  language rating Attributes -->
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
