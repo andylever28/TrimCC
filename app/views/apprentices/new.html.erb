@@ -30,6 +30,10 @@
   <%= builder.text_field :modular_development %>
 </div>
 <div class="field">
+  <%= builder.label :full_stack %>
+  <%= builder.text_field :full_stack %>
+</div>
+<div class="field">
   <%= builder.label :testing %>
   <%= builder.text_field :testing %>
 </div>
@@ -37,14 +41,19 @@
   <%= builder.label :database_knowlege %>
   <%= builder.text_field :db_knowledge %>
 </div>
+
 <div class="field">
-  <%= builder.label :full_stack %>
-  <%= builder.text_field :full_stack %>
+  <%= builder.label :debugging %>
+  <%= builder.text_field :debugging %>
 </div>
 
 <% end %> <!-- End Code Practice Attributes -->
 
 <%= f.fields_for :aptitude, Aptitude.new do |builder| %> <!--  Aptitude Attributes -->
+<div class="field">
+  <%= builder.label :problem_solving %>
+  <%= builder.text_field :problem_solving %>
+</div>
 <div class="field">
   <%= builder.label :teamwork %>
   <%= builder.text_field :teamwork %>
@@ -65,10 +74,7 @@
   <%= builder.label :intelligence %>
   <%= builder.text_field :intelligence %>
 </div>
-<div class="field">
-  <%= builder.label :problem_solving %>
-  <%= builder.text_field :problem_solving %>
-</div>
+
 <% end %> <!--  Aptitude Attributes -->
 
 <%= f.fields_for :language_rating, LanguageRating.new do |builder| %> <!--  language rating Attributes -->

@@ -16,7 +16,7 @@ class ApprenticesController < ApplicationController
   private 
 
   def apprentice_params
-  	params.require(:apprentice).permit(:name, :email, :project_repo, :project_url, code_practice_attributes: [:OOP, :modular_development, :full_stack, :testing, :db_knowledge], aptitude_attributes: [:teamwork, :motivation, :communication, :energy, :intelligence, :problem_solving], language_rating_attributes: [:javascript, :html, :css])
+  	params.require(:apprentice).permit(:name, :email, :project_repo, :project_url, code_practice_attributes: [:OOP, :modular_development, :full_stack, :testing, :db_knowledge, :debugging], aptitude_attributes: [:teamwork, :motivation, :communication, :energy, :intelligence, :problem_solving], language_rating_attributes: [:javascript, :html, :css])
   end 
 
 end
