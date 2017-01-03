@@ -13,7 +13,7 @@ class ApprenticesController < ApplicationController
 
     respond_to do |format|
     if @apprentice.save
-      data_mailer(@apprentice).deliver_now
+      DataMailer.data_mailer(@apprentice).deliver_now
        format.html { redirect_to root_url, :notice => "Signed up!" }
     else 
       format.html { render :new }
