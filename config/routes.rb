@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'apprentice/new'
+  get 'apprentices/new'
 
-  get 'apprentice/create'
+  get 'apprentices/create'
 
+  root 'apprentices#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
