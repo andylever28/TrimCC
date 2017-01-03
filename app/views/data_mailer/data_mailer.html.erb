@@ -5,8 +5,8 @@
 </head>
 <body>
 	<p> Hi Tim, </p>
-	<p> I have successfully completed the Trim Coding Challenge. Please see below for the data you requested. </p>
-	<h1> Name: <%= @apprentice.name %> <%= @apprentice.email %> </h1>
+	<p> I have successfully completed the Trim Coding Challenge. Please see attached data. </p>
+	<h2> Name: <%= @apprentice.name %> - <%= @apprentice.email %> </h2>
 	<p> This project is hosted at <%= @apprentice.project_url %>. The github repo can be viewed at <%= @apprentice.project_repo %> </p>
 	<h2> Language rankings </h2>
 	<ul>
@@ -35,11 +35,12 @@
 		<li> Debugging: <%= @apprentice.code_practice.debugging %> / 50 </li> 
 	</ul>
 
-	<p> The coding challenge was a fun and rewarding experience. 3 months ago, I would have rated myself a 0 for almost all the skills listed. I have experience tremendous growth, and I am eager to continue my learning. I know I would quickly become a valued member of the trim team. </p>
+	<p> The coding challenge was a fun and rewarding experience. 3 months ago, I would have rated myself a 0 for almost all the skills listed. I have experienced tremendous growth, and I am eager to continue my learning. I know I would quickly become a valued member of the trim team. </p>
 	<p> Please feel free to contact me at any time. </p>
 
 	<p> Regards, </br>
-	<%= @apprentice.name %> </p>
+	<%= @apprentice.name %> </br>
+	561-818-6833</p>
 
 
 </body>
