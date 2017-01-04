@@ -1,8 +1,11 @@
 * { 
 background: #114B5F;
-font-family: 'museo_sans500' !important;
+font-family: 'museo_sans500'
 }
 
+body {
+	font-family: 'museo_sans500'
+}
 .landing {
 	text-align: center;
 }
