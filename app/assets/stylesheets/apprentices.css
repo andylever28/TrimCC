@@ -1,3 +1,6 @@
+.new_apprentice {
+	background: #456990;
+	}
 .application-row {
 	display: flex;
 	justify-content: space-around;
@@ -14,15 +17,37 @@
 	height: 8em;
 }
 
-.inline-text-box {
+.input-field {
+			color: #349CA2;
+}
+
+#instruction-label {
+	margin-left: 5%;
+	font-size: 2.5em;
+	background: #456990;
+	color: #F45B69;
+	letter-spacing: 4px;
+}
+
+.instruction-field {
+	background: #456990;
+}
+.inline-text-box,
+.application-submit {
 	margin: 1.5em 5%;
 	height: 5em;
 	width: 90%;
 	background: #E4FDE1;
 	text-indent: 1em;
 	letter-spacing: 4px;
+	color: #349CA2;
+
 }
 
+.inline-text-box,
+.number-input {
+	border: 1px solid #E4FDE1;
+}
 .number-label {
 	background: #456990;
 	color: #E4FDE1;
@@ -33,7 +58,6 @@
 	margin-left: 5%;
 	width: 80%;
 	letter-spacing: 5px;
-	text-transform: uppercase;
 
 }
 
@@ -47,16 +71,28 @@ text-align: center;
 }
 
 .application-submit {
-	width: 90%;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 5%;
 	background: #F45B69;
 	color: #E4FDE1;
-	letter-spacing: 4px;
+  border: 1px solid #F45B69;
+
+}
+
+#error_explanation {
+	color: #E4FDE1;
+	background: #456990;
+}
+
+.field_with_errors,
+#error_explanation h2,
+#error_explanation li,
+#error_explanation ul {
+	background: #456990;
 }
 
 @media (min-width: 992px) {
+	#instruction-label {
+		font-size: 1.5em;
+	}
 	.input-field {
 		height: 6em;
 	}
@@ -69,5 +105,6 @@ text-align: center;
 	.number-input {
 		width: 15%;
 		height: 2em;
+		font-height: 1em;
 	}
 }

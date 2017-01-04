@@ -31,31 +31,35 @@
         <%= f.text_field :project_url, placeholder: "PROJECT URL", class: "inline-text-box" %>
       </div>
 
+      <div class="instruction-field">
+        <%= f.label "For the following entries, please enter a number between 0-50", id: "instruction-label" %>
+      </div>
+
       <%= f.fields_for :code_practice, CodePractice.new do |builder| %> <!-- Code Practice Attributes --> 
       <div class="input-field">
         <%= builder.label "USING BEST PRACTICES FOR OOP:", class: "number-label" %>
-        <%= builder.text_field :OOP, class: "number-input" %>
+        <%= builder.text_field :OOP, class: "number-input", :maxlength => 2 %>
       </div>
       <div class="input-field">
         <%= builder.label "MODULAR DEVELOPMENT: ", class: "number-label" %>
-        <%= builder.text_field :modular_development, class: "number-input" %>
+        <%= builder.text_field :modular_development, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "FULL STACK UNDERSTANDING:", class: "number-label" %>
-        <%= builder.text_field :full_stack, class: "number-input" %>
+        <%= builder.text_field :full_stack, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "TESTING:", class: "number-label" %>
-        <%= builder.text_field :testing, class: "number-input" %>
+        <%= builder.text_field :testing, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "DATABASE KNOWLEDGE:", class: "number-label" %>
-        <%= builder.text_field :db_knowledge, class: "number-input" %>
+        <%= builder.text_field :db_knowledge, class: "number-input", :maxlength => 2  %>
       </div>
 
       <div class="input-field">
         <%= builder.label "debugging:", class: "number-label" %>
-        <%= builder.text_field :debugging, class: "number-input" %>
+        <%= builder.text_field :debugging, class: "number-input", :maxlength => 2  %>
       </div>
 
       <% end %> <!-- End Code Practice Attributes -->
@@ -63,27 +67,27 @@
       <%= f.fields_for :aptitude, Aptitude.new do |builder| %> <!--  Aptitude Attributes -->
       <div class="input-field">
         <%= builder.label "Problem Solving:", class: "number-label" %>
-        <%= builder.text_field :problem_solving, class: "number-input" %>
+        <%= builder.text_field :problem_solving, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "Teamwork:", class: "number-label" %>
-        <%= builder.text_field :teamwork, class: "number-input" %>
+        <%= builder.text_field :teamwork, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "motivation:", class: "number-label" %>
-        <%= builder.text_field :motivation, class: "number-input" %>
+        <%= builder.text_field :motivation, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "communication:", class: "number-label" %>
-        <%= builder.text_field :communication, class: "number-input" %>
+        <%= builder.text_field :communication, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "energy:", class: "number-label" %>
-        <%= builder.text_field :energy, class: "number-input" %>
+        <%= builder.text_field :energy, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "intelligence:", class: "number-label" %>
-        <%= builder.text_field :intelligence, class: "number-input" %>
+        <%= builder.text_field :intelligence, class: "number-input", :maxlength => 2  %>
       </div>
 
       <% end %> <!--  Aptitude Attributes -->
@@ -91,15 +95,15 @@
       <%= f.fields_for :language_rating, LanguageRating.new do |builder| %> <!--  language rating Attributes -->
       <div class="input-field">
         <%= builder.label "javascript:", class: "number-label" %>
-        <%= builder.text_field :javascript, class: "number-input" %>
+        <%= builder.text_field :javascript, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "HTML:", class: "number-label" %>
-        <%= builder.text_field :html, class: "number-input" %>
+        <%= builder.text_field :html, class: "number-input", :maxlength => 2  %>
       </div>
       <div class="input-field">
         <%= builder.label "CSS:", class: "number-label" %>
-        <%= builder.text_field :css, class: "number-input" %>
+        <%= builder.text_field :css, class: "number-input", :maxlength => 2  %>
       </div>
       <% end %> <!--  language rating Attributes -->
 
