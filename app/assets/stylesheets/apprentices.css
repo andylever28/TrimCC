@@ -10,12 +10,12 @@
 .field,
 .actions {
 	background: #456990;
-	height: 6em;
+	height: 8em;
 }
 
 .inline-text-box {
 	margin: 1.5em 5%;
-	height: 3em;
+	height: 5em;
 	width: 90%;
 	background: #E4FDE1;
 	text-indent: 1em;
@@ -25,19 +25,23 @@
 .number-label {
 	background: #456990;
 	color: #E4FDE1;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	line-height: 2em;
+	font-size: 2em;
+	padding: 1em 0em;
+	margin-bottom: 0em;
 	margin-left: 5%;
-	width: 75%;
-	letter-spacing: 4px;
-	height: 3em;
+	width: 80%;
+	letter-spacing: 2px;
+
 }
 
 .number-input { 
-width: 15%; 
-margin-top: 1.5em;
-height: 3em;
+width: 10%; 
+margin: 1em 0em;
+height: 2em;
 background: #E4FDE1;
+font-size: 2em;
+text-align: center;
 }
 
 .application-submit {
