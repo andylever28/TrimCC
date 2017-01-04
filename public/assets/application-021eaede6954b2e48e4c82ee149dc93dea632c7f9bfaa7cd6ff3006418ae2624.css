@@ -1,0 +1,196 @@
+.new_apprentice {
+	background: #456990;
+	}
+.application-row {
+	display: flex;
+	justify-content: space-around;
+}
+.application-column {
+	background: #456990;
+	margin-top: 5em;
+}
+
+.field,
+.actions,
+.input-field {
+	background: #456990;
+	height: 8em;
+}
+
+.input-field {
+			color: #349CA2;
+}
+
+#instruction-label {
+	margin-left: 5%;
+	font-size: 2.5em;
+	background: #456990;
+	color: #F45B69;
+	letter-spacing: 4px;
+}
+
+.instruction-field {
+	background: #456990;
+}
+.inline-text-box,
+.application-submit {
+	margin: 1.5em 5%;
+	height: 5em;
+	width: 90%;
+	background: #E4FDE1;
+	text-indent: 1em;
+	letter-spacing: 4px;
+	color: #349CA2;
+	text-transform: uppercase;
+
+}
+
+.inline-text-box,
+.number-input {
+	border: 1px solid #E4FDE1;
+}
+.number-label {
+	background: #456990;
+	color: #E4FDE1;
+	line-height: 2em;
+	padding: 1em 0em;
+	font-size: 2em;
+	margin-bottom: 0em;
+	margin-left: 5%;
+	width: 80%;
+	letter-spacing: 5px;
+
+}
+
+.number-input { 
+width: 10%; 
+margin: 0.5em 0em;
+height: 2em;
+background: #E4FDE1;
+font-size: 2em;
+text-align: center;
+}
+
+.application-submit {
+	background: #F45B69;
+	color: #E4FDE1;
+  border: 1px solid #F45B69;
+  text-transform: uppercase;
+
+}
+
+#error_explanation {
+	color: #E4FDE1;
+	background: #456990;
+}
+
+.field_with_errors,
+#error_explanation h2,
+#error_explanation li,
+#error_explanation ul {
+	background: #456990;
+}
+
+@media (min-width: 992px) {
+	#instruction-label {
+		font-size: 1.5em;
+	}
+	.input-field {
+		height: 6em;
+	}
+	.number-label {
+		width: 75%;
+		font-size: 1em;
+		letter-spacing: 4px;
+	}
+
+	.number-input {
+		width: 15%;
+		height: 2em;
+		font-height: 1em;
+	}
+}
+* { 
+background: #114B5F;
+font-family: 'museo_sans500';
+}
+
+.landing {
+	text-align: center;
+}
+
+.landing h1 {
+	font-size: 10em;
+	color: #E4FDE1;
+}
+
+
+.landing h3 {
+	color: #E4FDE1; 
+}
+
+.landing a {
+	text-decoration: none;
+	color: #F45B69;
+	font-size: 2em;
+}
+
+.landing a:hover {
+	color: #E4FDE1;
+}
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2017 Fontspring
+ * 
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      exljbris Font Foundry
+ * License URL: https://www.fontspring.com/licenses/exljbris/webfont
+ *
+ *
+ */
+
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('MuseoSans_500-webfont.eot');
+    src: url('MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MuseoSans_500-webfont.woff2') format('woff2'),
+         url('MuseoSans_500-webfont.woff') format('woff'),
+         url('MuseoSans_500-webfont.ttf') format('truetype'),
+         url('MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
