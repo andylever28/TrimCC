@@ -8,7 +8,8 @@
 }
 
 .field,
-.actions {
+.actions,
+.input-field {
 	background: #456990;
 	height: 8em;
 }
@@ -19,25 +20,26 @@
 	width: 90%;
 	background: #E4FDE1;
 	text-indent: 1em;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 }
 
 .number-label {
 	background: #456990;
 	color: #E4FDE1;
 	line-height: 2em;
-	font-size: 2em;
 	padding: 1em 0em;
+	font-size: 2em;
 	margin-bottom: 0em;
 	margin-left: 5%;
 	width: 80%;
-	letter-spacing: 2px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
 
 }
 
 .number-input { 
 width: 10%; 
-margin: 1em 0em;
+margin: 0.5em 0em;
 height: 2em;
 background: #E4FDE1;
 font-size: 2em;
@@ -51,5 +53,21 @@ text-align: center;
 	margin-left: 5%;
 	background: #F45B69;
 	color: #E4FDE1;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
+}
+
+@media (min-width: 992px) {
+	.input-field {
+		height: 6em;
+	}
+	.number-label {
+		width: 75%;
+		font-size: 1em;
+		letter-spacing: 4px;
+	}
+
+	.number-input {
+		width: 15%;
+		height: 2em;
+	}
 }
