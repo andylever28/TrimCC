@@ -1,6 +1,6 @@
 * { 
 background: #114B5F;
-font-family: 'museo_sans500';
+font-family: 'museo_sans500' !important;
 }
 
 .landing {
