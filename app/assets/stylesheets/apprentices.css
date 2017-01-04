@@ -41,6 +41,7 @@
 	text-indent: 1em;
 	letter-spacing: 4px;
 	color: #349CA2;
+	text-transform: uppercase;
 
 }
 
@@ -74,6 +75,7 @@ text-align: center;
 	background: #F45B69;
 	color: #E4FDE1;
   border: 1px solid #F45B69;
+  text-transform: uppercase;
 
 }
 
