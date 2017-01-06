@@ -1,10 +1,15 @@
 * { 
 background: #114B5F;
+/*font-family: "museo_sans500", sans-serif;
+*/
 font-weight: 500;
 text-transform: uppercase;
 }
 
 body {
+/*	font-family: "museo_sans500", sans-serif;
+*/
+	font-family: sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 }
