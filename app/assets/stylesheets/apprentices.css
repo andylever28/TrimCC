@@ -100,8 +100,9 @@ text-align: center;
 	}
 	.number-label {
 		width: 75%;
-		font-size: 1em;
+		font-size: 1.5em;
 		letter-spacing: 4px;
+		text-transform: uppercase;
 	}
 
 	.number-input {
