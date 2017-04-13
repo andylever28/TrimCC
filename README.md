@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project was built for a coding challenge through Trim Agency. Given a PDF, I was instructed to recreate a form. 
+This forms allows users to rank their skills on a scale of 1-50. 
+Upon submittal, valid information is written to the database, and an email is fired to the owner of Trim Agency. 
